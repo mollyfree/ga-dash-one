@@ -2,6 +2,8 @@ https://dash.generalassemb.ly/projects
 
 <!-- PROJECT 2: BUILD A RESPONSIVE BLOG THEME --!>
 
+<!-- LESSON ONE --!>
+
 <!DOCTYPE html>
 <head>
 </head>
@@ -16,3 +18,213 @@ https://dash.generalassemb.ly/projects
     </ul>
   </header>
 </body>
+
+<!-- LESSON TWO: HEADER CSS --!>
+
+<!-- Note: the <link> tag is another way to include CSS in html file 
+link tag always needs two attributes: href (url where file lives) and rel (which should always be "stylesheet") --!>
+
+<!-- Note: set ul { padding: 10px; } to solve alignment issues... gets rid of bullet points? --!>
+
+<!-- block vs inline
+
+block: stretch the whole width of the page and have line breaks before and after (headings, paragraphs, list items)
+inline: exist within the normal flow of text, no line breaks (a tag) --!>
+
+<!-- padding: top right bottom left; --!>
+
+<!DOCTYPE html>
+<head>
+  <link href="/normalize.css" rel="stylesheet">
+  <style>
+    header {
+      text-align: center;
+      }      
+    ul {
+      padding: 10px;
+      }
+    li {
+      display: inline;
+      padding: 0px 10px 0px 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="/assets/jeff.png">
+    <h1>Jeff's Blog</h1>
+    <ul>
+      <li><a href="#">About Me</a></li>
+      <li><a href="#">Best Poems</a></li>
+      <li><a href="#">Worst Poems</a></li>
+    </ul>
+  </header>
+</body>
+
+<!-- margin creates space on the outside of an element, padding creates space on the inside --!>
+
+<!DOCTYPE html>
+<head>
+  <link href="/normalize.css" rel="stylesheet">
+  <style>
+    header {
+      text-align: center;
+      background: url("http://dash.ga.co/assets/jeff-bg.png");
+      background-size:cover;
+      color: white;
+      }      
+    a {
+      color: white;
+    }
+    h1 {
+      font-size: 70px;
+    }
+    img {
+      margin: 40px 0px 0px 0px;
+      border: 7px solid white;
+      border-radius: 20px;
+    }
+    ul {
+      padding: 10px;
+      background: black;
+      }
+    li {
+      display: inline;
+      padding: 0px 10px 0px 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="/assets/jeff.png">
+    <h1>Jeff's Blog</h1>
+    <ul>
+      <li><a href="#">About Me</a></li>
+      <li><a href="#">Best Poems</a></li>
+      <li><a href="#">Worst Poems</a></li>
+    </ul>
+  </header>
+</body>
+
+<!-- LESSON THREE: RESPONSIVE DESIGN AND JAVASCRIPT --!>
+
+<!-- article tag lets us group together multiple HTML elements that form a single piece of content. --!>
+
+<!-- margin: 0 auto == 0 margin on top and bottom, auto on left and right. since both stretch to the edge of the page, the effect is that blog post is centered. --!>
+
+<!-- max-width makes sure article width is never bigger than 500, but can adjust. however, need media query to fix issues when browser window is too small  --!>
+
+<!-- @media (max-width: 500px) {     } --- syntax for setting a condition, in this case when browser is smaller than 500px --!>
+
+<!-- hex color code: first character controls amount of redness, from 0 to F
+
+second character is amount of green-ness (from 0 to F)
+
+third is amount of blueness --- together they're RGB
+
+can also do rgba(), which adds transparency (and uses 0-255 scale, with last digit being 0-1 --!>
+
+<!-- we can use javascript to listen for events (click something, move mouse, press a key or scroll) and take action when that happens --!>
+
+<!-- javascript:
+
+first is element whose event we want to listen to
+  $("button")
+  
+next we call the on() function, which sets up an event listener. inside parantehses are two parameters or arguments
+  .on( );
+
+first parameter is type of event to listen to (click, hover, scroll, etc... must be in quotes)
+  "click",
+  
+second is a function containing the thing to be done - in this case a pop up alert
+  function() {
+    alert("A button was clicked!")
+    }
+    
+  <!DOCTYPE html>
+<head>
+  <link href="/normalize.css" rel="stylesheet">
+  <style>
+    header {
+      text-align: center;
+      background: url('http://dash.ga.co/assets/jeff-bg.png');
+      background-size: cover;
+      color: white;
+    }
+    a {
+      color: white;
+    }
+    h1 {
+      font-size: 70px;
+    }
+    img {
+      margin: 40px 0px 0px 0px;
+      border: 7px solid white;
+      border-radius: 20px;
+    }
+    ul {
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    li {
+      display: inline;
+      padding: 0px 10px 0px 10px;
+    }
+    article {
+      max-width: 500px;
+      padding: 20px;
+      margin: 0 auto;
+      }
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 36px;
+      }
+      li {
+        display: block;
+        padding: 5px;
+      }
+      body {
+        background: red;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="/assets/jeff.png">
+    <h1>Jeff's Blog</h1>
+    <ul>
+      <li><a href="#">About Me</a></li>
+      <li><a href="#">Best Poems</a></li>
+      <li><a href="#">Worst Poems</a></li>
+    </ul>
+  </header>
+  <article>
+    <h2>VHS umami pop-up trust fund</h2>
+    <p>Marfa church-key kitsch bicycle rights, 8-bit mixtape cardigan gentrify Echo Park. Street art swag brunch, next level roof party Schlitz hella organic keffiyeh selfies. You probably haven't heard of them polaroid hashtag +1, meggings biodiesel Portland High Life cray tumblr retro.</p>
+    <button>Like</button>
+  </article>
+  <article>
+    <h2>Sartorial synth Echo Park, roof party</h2>
+    <p>chambray you probably haven't heard of them pour-over viral selvage umami skateboard VHS post-ironic selfies. Wes Anderson gentrify fanny pack twee, bicycle rights bitters blog keffiyeh plaid flannel. Tonx irony cliche sustainable mlkshk bitters. Four loko leggings chambray Vice.</p>
+    <button>Like</button>
+  </article>
+  <article>
+    <h2>Forage food truck keytar master cleanse</h2>
+    <p>ethical thundercats sustainable locavore quinoa Neutra. Aesthetic Cosby sweater single-origin coffee, bicycle rights organic lo-fi street art american apparel ennui four loko ethnic Brooklyn small batch. Forage YOLO polaroid</p>
+    <button>Like</button>
+  </article>
+<script>
+  $("button").on("click", function() { 
+    alert("clicked!")
+  });
+</script>
+</body>
+
+<!-- LESSON FOUR: BUILD YOUR OWN BLOG THEME --!>
+
+
+
+
+
