@@ -224,7 +224,148 @@ second is a function containing the thing to be done - in this case a pop up ale
 
 <!-- LESSON FOUR: BUILD YOUR OWN BLOG THEME --!>
 
+<!DOCTYPE html>
+<head>
+  <link href="/normalize.css" rel="stylesheet">
+  <style>
+    header {
+      text-align: center;
+      background: url('http://i.imgur.com/TMx6gRH.jpg');
+      background-size: cover;
+      color: white;
+    }
+    a {
+      color: white;
+    }
+    h1 {
+      font-size: 70px;
+    }
+    img {
+      max-height: 200px;
+      margin: 40px 0px 0px 0px;
+      border: 7px solid black;
+      border-radius: 20px;
+    }
+    ul {
+      padding: 10px;
+      background: rgba(0,0,0,0.5);
+    }
+    li {
+      display: inline;
+      padding: 0px 10px 0px 10px;
+    }
+    article {
+      max-width: 500px;
+      padding: 20px;
+      margin: 0 auto;
+    }
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 36px;
+        padding: 5px;
+      }
+      li {
+        padding: 5px;
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="http://i.imgur.com/i33Y4VI.jpg">
+    <h1>The Cheese Puffs</h1>
+    <ul>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Cast and Crew</a></li>
+      <li><a href="#">Timeline and videos</a></li>
+    </ul>
+  </header>
+  <article>
+    <h2>Cheese Puffs are awesome</h2>
+    <p>Oh yes, they are.</p>
+    <button>Like</button>
+  </article>
+  <script>
+    $("button").on("click", function() {
+      alert("Clicked!");
+    });
+  </script>
+</body>
 
+
+<!-- second version with minor changes to header --!>
+
+<!DOCTYPE html>
+<head>
+  <link href="/normalize.css" rel="stylesheet">
+  <style>
+    header {
+      text-align: center;
+      background: url('http://i.imgur.com/TMx6gRH.jpg');
+      background-size: cover;
+      color: white;
+    }
+    a {
+      color: white;
+    }
+    h1 {
+      font-size: 70px;
+    }
+    img {
+      max-height: 200px;
+      margin: 40px 0px 0px 0px;
+      border: 7px solid black;
+      border-radius: 20px;
+    }
+    ul {
+      padding: 10px;
+      background: rgba(0,0,0,1);
+    }
+    li {
+      display: inline;
+      padding: 0px 10px 0px 10px;
+    }
+    article {
+      max-width: 500px;
+      padding: 20px;
+      margin: 0 auto;
+    }
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 36px;
+        padding: 5px;
+      }
+      li {
+        padding: 5px;
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="http://i.imgur.com/i33Y4VI.jpg">
+    <h1>The Cheese Puffs</h1>
+    <ul>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Cast and Crew</a></li>
+      <li><a href="#">Timeline and videos</a></li>
+    </ul>
+  </header>
+  <article>
+    <h2>Cheese Puffs are awesome</h2>
+    <p>Oh yes, they are.</p>
+    <button>Like</button>
+  </article>
+  <script>
+    $("button").on("click", function() {
+      alert("Clicked!");
+    });
+  </script>
+</body>
+
+<!-- link: https://dash.generalassemb.ly/mollyfree/build-your-own-blog-theme --!>
 
 
 
