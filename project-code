@@ -1,0 +1,113 @@
+<!-- LESSON ONE --!>
+
+<h1>Anna Dowlin</h1>
+
+<p>"Hi! I'm Anna Dowlin, a NyC-based marketer. Say hello!"</p>
+
+<input type="email" placeholder="Your email">
+<input type="submit">
+
+<!-- LESSON TWO: CSS --!>
+<!-- Note: they're teaching to use <style> tags for simple projects, rather than external style sheets --!>
+
+<!-- "boilerplate" is doctype, head, and body. head is where meta info goes. inside head is title, which is what shows up on broser window. --!>
+
+<!DOCTYPE html>
+<head>
+  <title>Anna Dowlin</title>
+  <style>
+  body {
+    text-align: center;
+    background: black;
+    color: white;
+    font-family: helvetica;
+  }
+  </style>  
+</head>
+<body>
+<h1>Anna Dowlin</h1>
+<p>Hi! I'm Anna, a NYC-based marketer. Say hello!</p>
+<input type="email" placeholder="Your email">
+<input type="submit">
+</body>
+
+<!-- LESSON THREE: IMAGES AND FORM STYLING --!>
+
+<!-- Absolute vs relative URLs:
+  absolute: includes http://
+  relative: shortcuts - only works if you're linking to a file on the same domain as current page. --!>
+  
+<!-- padding is the amount of space between the edge of an element and the stuff inside it --!>
+
+<!DOCTYPE html>
+<head>
+  <title>Anna Dowlin</title>
+  <style>
+    body {
+      text-align: center;
+      background: url("http://dash.ga.co/assets/anna-bg.png");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      font-family: helvetica;
+    }
+    p {
+      font-size: 22px;
+    }
+    input {
+      border: 0;
+      padding: 10px;
+      font-size: 18px;
+    }
+    input[type="submit"] {
+      background: red;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <img src="/assets/anna.png">
+  <p>Hi! I'm Anna, a NYC-based marketer. Say hello!</p>
+  <input type="email" placeholder="Your email">
+  <input type="submit">
+</body>
+
+<!-- LESSON FOUR: BUILD YOUR OWN PERSONAL WEBSITE --!>
+
+<!-- uploading images: if you want to use an image from your computer, upload it to a site like imgur.com and use the public URL they give you. be sure to use the URL for the image itself, and not a webspage with the image on it. -->
+
+<!DOCTYPE html>
+<head>
+  <title>Miss Molly Mozzarella</title>
+  <style>
+    body {
+      text-align: center;
+      background: url("http://i.imgur.com/TMx6gRH.jpg");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      font-family: helvetica;
+    }
+    p {
+      font-size: 22px;
+    }
+    input {
+      border: 0;
+      padding: 10px;
+      font-size: 18px;
+    }
+    input[type="submit"] {
+      background: red;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <a href="http://imgur.com/b8e10v6"><img src="http://i.imgur.com/b8e10v6.jpg" title="source: imgur.com" /></a>
+  <p>Hi! I'm Miss Molly Mozzarella, founder of the Cheese Puffs. Say hello!</p>
+  <input type="email" placeholder="Your email">
+  <input type="submit">
+</body>
+
+
+
