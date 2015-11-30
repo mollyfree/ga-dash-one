@@ -84,3 +84,136 @@ p {
   </p>
 </div>
 </body>
+
+<!-- LESSON 2: SPANS, GRADIENTS, TRANSPARENCY, AND WEB FONTS --!
+
+<!-- you can use <span> inside another tag to make any bit of content display differently from the rest in the same tag --!>
+
+<!-- most text containers display as block by default --!>
+<!-- text-align can only align blocks, but spans are inline elements --!>
+
+<!--
+
+block elements:
+paragraphs <p>
+headers <h1-h6>
+lists <ul><ol><li>
+divs <div>
+
+inline elements:
+hyperlinks <a>
+images <img>
+form fields <input>
+spans <span>
+
+--!>
+
+<!-- floats let you slide the content of a spa or an image around inside its container element --!>
+
+<!-- this is how a gradient should work:
+
+background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+
+note: there are also radial gradients --!>
+
+<!-- paragraph styles for different browsers:
+
+safari, chrome, and opera - background:-webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+
+firefox - background:-moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+
+IE - n/a --!>
+
+<! -- don't forget to give an option for other browsers, like IE, that can't read advanced features --f!>
+
+<! -- www.google.com/fonts --!>
+
+<!DOCTYPE html>
+
+<head>
+<link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
+<style>
+body {
+  font-family: helvetica, sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
+  background: #232323;
+}
+h1 {
+  font-family: 'Londrina Shadow', cursive;
+  font-size: 75px;
+  text-align: center;
+  margin: 60px 0 0 0;
+  color: #aaaaaa;
+}
+h2 {
+  text-align: center;
+  margin: 0 0 70px 0;
+  color: #bbbbbb;
+}
+div {
+  height: 200px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+p {
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,1);
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background:-webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4    ));
+  background:-moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+}
+
+.first{
+  background-image: url("http://dash.ga.co/assets/firstcourse.jpg");
+}
+.second{
+  background-image: url("http://dash.ga.co/assets/secondcourse.jpg");
+}
+.dessert{
+  background-image: url("http://dash.ga.co/assets/dessertcourse.jpg");
+}
+.price{
+  float: right;
+}
+</style>
+
+</head>
+
+<body>
+<h1>esha's restaurant</h1>
+<h2>A New York City Eatery</h2>
+<div class="first">
+<p>welsh onion soko <span class="price">$14</span><br />
+<small>Mustard sierra leone bologi kale chard beet greens black-eyed pea sorrel amaranth garlic tigernut spring onion summer purslane asparagus lentil. </small></p>
+</div>
+<div class="second">
+<p>pastrami boudin tongue <span class="price">$22</span><br />
+<small>Tri-tip capicola kielbasa salami brisket chicken rump strip steak drumstick. Meatloaf chuck boudin ribeye pork jowl. Andouille bacon jowl meatloaf pork loin prosciutto bresaola.</small></p>
+</div>
+<div class="dessert">
+<p>fruitcake marzipan pudding dragee <span class="price">$8</span><br />
+<small>Lollipop tart cotton candy jelly-o carrot cake apple pie cupcake. Jelly-o bear claw ice cream candy canes.</small></p>
+</div>
+</body>
+
+<!-- LESSON 3: RESPONSIVE DESIGN; GETTING INTERACTIVE WITH JS AND CSS --!>
+
+<!-- we use background size: cover; instead of background-size: 100%; because of mobile applications - cover will scale better, while 100% might mess with assigned height of images --!>
+
+<!-- best never to use specific widths and heights (including percentages) for images in CSS --!>
+
+<!-- browsers read CSS from top to bottom. if you give it a command that conflicts with something you told it previously, it  forgets the old style and runs with the new one --!>
+
+<!-- JQuery saves you from having to define common chunks of JS in your code and lets you just use them --!>
+
+
+
