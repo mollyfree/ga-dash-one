@@ -67,3 +67,15 @@ border-top: width style color;
 </body>
 
 <!-- LESSON TWO: USING CSS TO POSITION ELEMENTS ON A WEBPAGE --!>
+
+<!-- position: relative; allows you to move things around on the page --!>
+
+<!-- left and top work like x and y axes --!>
+
+<!-- z is front-to-back. the default value for z-index is 0. if you want something to go behind your main working layer, give it a negative value. if in front, give it number greater than zero. --!>
+
+<!-- z, top, left, etc. only works on positioned elements --!>
+
+
+
+
